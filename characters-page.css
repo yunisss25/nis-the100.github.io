@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  bottom: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0; 
+}
+
+header {
+  background: linear-gradient(to right, #000000, #669999, #406060, #80B0B0, #004040);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  backdrop-filter: blur(5px);
+  position: fixed; 
+  top: 0;
+  z-index: 1000; 
+  transition: background-color 0.3s ease; 
+}
+
+header img {
+  width: 150px;
+  height: auto;
+}
+
+body {
+  background-image: url(images/characters-br.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; 
+  flex-grow: 1; 
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 5px;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #E8B8CB;
+}
+
+h1 {
+  background-color: #004040;
+  font-family: Monospace, 'Lucida Sans';
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  position: sticky;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  80% { opacity: 0.5; transform: scale(0.8); }
+  100% { opacity: 0; transform: scale(0); display: none; }
+}
+
+@keyframes textFadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.banner {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.banner img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+.char {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin: 0;
+}
+
+.characters {
+  width: 288px;
+  height: 384px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px;
+  padding: 0;
+  transition: transform 0.3s;
+}
+
+.characters_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.characters a {
+  text-decoration: none;
+  color: #333;
+}
+
+.characters:hover {
+  transform: scale(1.05);
+  top: -4px;
+}
+
+footer {
+  background: #669999;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1540px) {
+  header {
+    height: 70px;
+  }
+  header img {
+    width: 140px;
+  }
+
+  h1 {
+    font-size: 54px; 
+  }
+
+  .characters .seasons {
+    width: 250px;
+    height: 350px; 
+  }
+
+  .navbar ul li {
+    margin-left: 25px; 
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  header img {
+    width: 120px; 
+  }
+
+  header {
+    height: 65px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .characters .seasons {
+    width: 220px; 
+    height: 300px; 
+  }
+
+  .navbar ul li {
+    margin-left: 20px; 
+  }
+}
+
+@media screen and (max-width: 960px) {
+  header img {
+    width: 100px;
+  }
+
+  header {
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 40px; 
+  }
+
+  .characters_img .seasons_img {
+    width: 90%; 
+    height: auto; 
+  }
+
+  .navbar ul {
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .navbar ul li {
+    margin-left: 15px; 
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header img {
+    width: 80px; 
+  }
+
+  header {
+    height: 55px;
+  }
+
+  h1 {
+    font-size: 36px; 
+  }
+
+  .characters_img .seasons_img {
+    width: 85%; 
+    height: auto; 
+  }
+
+  .navbar ul li {
+    margin-left: 5px; 
+  }
+}
+
+@media screen and (max-width: 560px) {
+  header img {
+    width: 60px; 
+  }
+
+  header {
+    height: 50px;
+  }
+
+  h1 {
+    font-size: 30px; 
+  }
+
+  .characters_img .seasons_img {
+    width: 80%; 
+    height: auto; 
+  }
+
+  .navbar ul li {
+    margin-left: 5px; 
+    margin-right: 5px; 
+  }
+
+  .navbar ul li a {
+    font-size: 12px; 
+  }
+}
+
+@media screen and (max-width: 415px) {
+  header {
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 24px; 
+  }
+
+  .characters_img .seasons_img {
+    width: 75%; 
+    height: auto; 
+  }
+}
+
